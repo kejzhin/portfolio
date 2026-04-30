@@ -1,12 +1,14 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Portfolio",
   description: "My portfolio",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#0f111a] text-white">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
