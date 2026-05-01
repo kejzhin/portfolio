@@ -83,7 +83,7 @@ export default function Hero() {
                 transition={{ delay: 1, duration: 1 }}
                 className="text-brand-purple text-xs md:text-lg font-mono tracking-widest uppercase border-l-2 border-brand-purple/30 pl-4 font-bold"
               >
-                Cybersecurity Architect | Visual Identity Specialist
+                Cybersecurity Expert | Visual Identity Specialist
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
