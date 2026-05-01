@@ -29,9 +29,9 @@ export default function ProjectSection() {
     {
       title: "Stakecube.net",
       description: "One-stop Ecosystem for Crypto Assets.",
-      longDescription: "Automated staking, masternode hosting, and integrated exchange. Served as a security consultant and UI contributor for the platform's ecosystem expansion.",
+      longDescription: "Automated staking, masternode hosting, and integrated exchange. Served as a Security consultant and Penetration Tester.",
       tags: ["Staking", "Exchange", "Security"],
-      image: "https://stakecube.info/wp-content/uploads/2020/03/StakeCube-Logo-White-Text-Small.png",
+      image: "https://raw.githubusercontent.com/kejzhin/portfolio/main/image/sc.png",
       link: "https://stakecube.net",
       icon: Database,
       color: "#2C3E50"
@@ -49,9 +49,9 @@ export default function ProjectSection() {
     {
       title: "Vitae Token",
       description: "Social Rewards Blockchain Platform.",
-      longDescription: "Strategic technical support and security auditing for the Vitaatoken ecosystem, focusing on platform integrity and user data protection.",
-      tags: ["Web3", "Auditing", "UI"],
-      image: "https://vitaetoken.io/images/logo-white.png",
+      longDescription: "Penetration Tester and Information Security.",
+      tags: ["Auditing", "Pentesting"],
+      image: "https://github.com/kejzhin/portfolio/blob/main/image/vitae.png",
       link: "https://vitae.co",
       icon: Zap,
       color: "#F1C40F"
@@ -59,9 +59,9 @@ export default function ProjectSection() {
     {
       title: "Metrixcoin.com",
       description: "Digital Currency built on Proof-of-Stake.",
-      longDescription: "Graphics design and technical advisory for the Metrix community. Focused on modernizing the digital identity and securing community-driven applications.",
-      tags: ["PoS", "Design", "Consulting"],
-      image: "https://metrixcoin.com/images/metrix-logo.png",
+      longDescription: "Penetration Tester & Information Security.",
+      tags: ["Auditing", "Pentester", "Consulting"],
+      image: "https://github.com/kejzhin/portfolio/blob/main/image/metrix.png",
       link: "https://metrixcoin.com",
       icon: Cpu,
       color: "#27AE60"
@@ -69,9 +69,9 @@ export default function ProjectSection() {
     {
       title: "Aercrypt.net",
       description: "Secure Encryption & Communication Hub.",
-      longDescription: "Developed secure communication protocols and performed penetration testing for Aercrypt's end-to-end encrypted messaging services.",
+      longDescription: "Ferformed penetration testing for Aercrypt's end-to-end encrypted messaging services.",
       tags: ["Encryption", "Pentesting", "Dev"],
-      image: "https://aercrypt.net/assets/img/logo.png",
+      image: "https://github.com/kejzhin/portfolio/blob/main/image/aer.jpg",
       link: "https://aercrypt.net",
       icon: Lock,
       color: "#E74C3C"
@@ -79,9 +79,9 @@ export default function ProjectSection() {
     {
       title: "StackofStake.com",
       description: "Automated Staking & Masternodes platform.",
-      longDescription: "Collaborated on platform security audits and UI refinements to provide a seamless user experience for crypto-asset staking.",
+      longDescription: "Collaborated on platform security audits to provide a seamless user experience for crypto-asset staking.",
       tags: ["Staking", "Masternodes", "UI"],
-      image: "https://stackofstake.com/img/logo.png",
+      image: "https://github.com/kejzhin/portfolio/blob/main/image/sos.png",
       link: "https://stackofstake.com",
       icon: Database,
       color: "#8E44AD"
@@ -89,9 +89,9 @@ export default function ProjectSection() {
     {
       title: "Cryptech.services",
       description: "Blockchain Technical Services Provider.",
-      longDescription: "I.T Technician and security advisor. Provided hardware assembly support, software installation, and system vulnerability assessments.",
+      longDescription: "Penetration Tester & security advisor and system vulnerability assessments.",
       tags: ["Services", "Tech Support", "Security"],
-      image: "https://cryptech.services/assets/images/logo.png",
+      image: "https://github.com/kejzhin/portfolio/blob/main/image/cs.png",
       link: "https://cryptech.services",
       icon: Terminal,
       color: "#95A5A6"
@@ -99,9 +99,9 @@ export default function ProjectSection() {
     {
       title: "Pepecoin.org",
       description: "The Original Meme Coin Ecosystem.",
-      longDescription: "Community driven graphics design and web development for the original Pepecoin community projects and explorer tools.",
+      longDescription: "Performed Penetration to Fluppygame PEPE and Vulnerability Assessments",
       tags: ["Meme", "Web Dev", "Graphics"],
-      image: "https://pepecoin.org/assets/img/logo.png",
+      image: "https://github.com/kejzhin/portfolio/blob/main/image/pepe.png",
       link: "https://pepecoin.org",
       icon: Globe,
       color: "#1ABC9C"
@@ -286,7 +286,7 @@ export default function ProjectSection() {
       {/* Project Details Modal (Folder Style) */}
       <AnimatePresence>
         {selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 pointer-events-none">
+          <div className="fixed inset-0 z-[160] flex items-center justify-center p-6 pt-32 md:p-40 pointer-events-none">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -296,34 +296,22 @@ export default function ProjectSection() {
             />
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 50 }}
+              initial={{ opacity: 0, scale: 0.95, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 50 }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="relative w-full max-w-5xl z-10 flex flex-col pointer-events-auto"
+              className="relative w-full max-w-4xl z-10 flex flex-col pointer-events-auto"
             >
-              {/* Folder Tab */}
-              <div className="flex items-end px-4 md:px-12 h-10">
-                <div 
-                  className="w-40 md:w-56 h-full border-t border-x border-white/20 rounded-t-2xl flex items-center justify-center gap-2 relative shadow-2xl"
-                  style={{ backgroundColor: selectedProject.color }}
-                >
-                  <selectedProject.icon size={16} className="text-white" />
-                  <span className="text-[8px] md:text-[10px] font-mono text-white font-bold uppercase tracking-widest whitespace-nowrap px-2">Case_Study_{selectedProject.title.split('.')[0]}</span>
-                  <div className="absolute -right-4 bottom-0 w-4 h-4 rounded-bl-full border-b border-l border-white/20" style={{ backgroundColor: selectedProject.color }} />
-                </div>
-              </div>
-
-              {/* Main Folder Body */}
-              <div className="w-full bg-[#111111] border border-white/20 rounded-3xl rounded-tl-none overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[500px] md:min-h-[550px] max-h-[80vh] overflow-y-auto custom-scrollbar md:overflow-visible">
+              {/* Main Modal Body */}
+              <div className="w-full bg-[#111111] border border-white/20 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[400px] md:min-h-[450px] max-h-[65vh] overflow-y-auto custom-scrollbar md:overflow-visible relative">
                 <button 
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-14 right-6 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all z-20"
+                  className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all z-20"
                 >
-                  <X size={20} />
+                  <X size={18} />
                 </button>
 
-                {/* Left Side: Large Preview Centerpiece */}
+                 {/* Left Side: Large Preview Centerpiece */}
                 <div className="w-full md:w-3/5 p-8 md:p-12 bg-black/40 flex items-center justify-center relative overflow-hidden shrink-0">
                   <div 
                     className="absolute inset-0 opacity-10 blur-3xl"
@@ -334,9 +322,19 @@ export default function ProjectSection() {
                     animate={{ scale: 1, opacity: 1 }}
                     className="relative z-10 w-full h-full flex flex-col items-center justify-center gap-8"
                   >
-                    <div className="w-32 h-32 rounded-[2.5rem] bg-white p-6 shadow-[0_30px_60px_rgba(0,0,0,0.5)] flex items-center justify-center">
-                       <selectedProject.icon className="text-[#111111]" size={64} />
-                    </div>
+                    {selectedProject.image.includes('placeholder') || selectedProject.image === '' ? (
+                      <div className="w-32 h-32 rounded-[2.5rem] bg-white p-6 shadow-[0_30px_60px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                        <selectedProject.icon className="text-[#111111]" size={64} />
+                      </div>
+                    ) : (
+                      <div className="w-full max-w-[280px] aspect-video rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/10">
+                        <img 
+                          src={selectedProject.image} 
+                          alt={selectedProject.title} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
                     <div className="text-center space-y-2">
                        <div className="text-white/20 font-mono text-[10px] tracking-[0.5em] uppercase">Security Encryption</div>
                        <div className="h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto" />
@@ -364,7 +362,7 @@ export default function ProjectSection() {
                     <div className="space-y-4">
                       <div className="p-5 bg-white/[0.03] border border-white/5 rounded-2xl">
                          <span className="text-[10px] font-mono text-white/20 uppercase tracking-widest block mb-1">Impact Analysis</span>
-                         <span className="text-sm text-white/70">Verified Infrastructure & User Security Protocols</span>
+                         <span className="text-sm text-white/70">Secure Digital Infrastructure Implementation</span>
                       </div>
                        <a 
                         href={selectedProject.link} 
@@ -388,10 +386,10 @@ export default function ProjectSection() {
         )}
       </AnimatePresence>
 
-      {/* Graphics Folder Pop-up */}
+      {/* Graphics Pop-up */}
       <AnimatePresence>
         {selectedGraphic && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 pointer-events-none">
+          <div className="fixed inset-0 z-[160] flex items-center justify-center p-6 pt-32 md:p-40 pointer-events-none">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -401,27 +399,17 @@ export default function ProjectSection() {
             />
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 100, rotateX: -15 }}
+              initial={{ opacity: 0, scale: 0.95, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 100, rotateX: 15 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="relative w-full max-w-5xl z-10 flex flex-col pointer-events-auto"
+              className="relative w-full max-w-4xl z-10 flex flex-col pointer-events-auto"
             >
-                {/* Folder Tab (Top Edge) */}
-                <div className="flex items-end px-4 md:px-12 h-10">
-                  <div className="w-40 md:w-48 h-full bg-[#1A1A1A] border-t border-x border-white/20 rounded-t-2xl flex items-center justify-center gap-2 relative">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-pink animate-pulse" />
-                    <span className="text-[8px] md:text-[10px] font-mono text-white/60 uppercase tracking-widest font-bold">Project_Archive</span>
-                    {/* Decorative Folder Notches */}
-                    <div className="absolute -right-4 bottom-0 w-4 h-4 bg-[#1A1A1A] rounded-bl-full border-b border-l border-white/20" />
-                  </div>
-                </div>
-
-                {/* Main Folder Body */}
-                <div className="w-full bg-[#1A1A1A] border border-white/20 rounded-3xl rounded-tl-none overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.9)] flex flex-col md:flex-row h-full md:min-h-[650px] max-h-[85vh] overflow-y-auto custom-scrollbar md:overflow-hidden">
+                {/* Main Modal Body */}
+                <div className="w-full bg-[#1A1A1A] border border-white/20 rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.9)] flex flex-col md:flex-row h-full md:min-h-[550px] max-h-[65vh] overflow-y-auto custom-scrollbar md:overflow-hidden relative">
                   <button 
                     onClick={() => setSelectedGraphic(null)}
-                    className="absolute top-14 right-6 w-10 h-10 md:w-12 md:h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 z-40"
+                    className="absolute top-4 right-4 w-10 h-10 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 z-40"
                   >
                     <X size={20} />
                   </button>
